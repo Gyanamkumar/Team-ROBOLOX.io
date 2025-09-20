@@ -59,5 +59,9 @@ Python 3.8+
 Access to Google AI Studio to generate an API key.
 
 Steps: 
-Clone the repository : git clone https://github.com/your-username/resume-analyzer.git
-cd resume-analyzer 
+Clone the repository : git clone https://github.com/Gyanamkumar/Team-ROBOLOX.io.git
+cd resume-anylyzer 
+pip freeze > requirements.txt
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+streamlit run app.py
