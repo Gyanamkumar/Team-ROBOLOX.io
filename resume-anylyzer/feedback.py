@@ -6,7 +6,7 @@ def generate_feedback(api_key, jd_text, resume_text, missing_skills):
     """
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('gemini-2.5-flash')
 
         # Create a detailed prompt for the model
         prompt = f"""
@@ -30,4 +30,5 @@ def generate_feedback(api_key, jd_text, resume_text, missing_skills):
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
+
         return f"Error generating feedback: Could not connect to the generative AI service. Please check your API key and configuration. Details: {e}"
